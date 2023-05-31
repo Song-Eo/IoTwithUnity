@@ -12,15 +12,10 @@ var connection = mysql.createConnection({
 });
 
 io.on('connection', function(socket){
-
-	socket.on('reset_data', function(){
-		
-		connection.query('UPDATE STATE SET STATE = 0');
-		console.log('Reset Complete');
-	})
 	
 	socket.on('error', function(e){
 		console.log(e);
+		
 	})
 
 	socket.on('update', function(data){
