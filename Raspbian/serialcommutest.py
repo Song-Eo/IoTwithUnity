@@ -19,12 +19,7 @@ def response_data(data):
 if(ser.read()):
 	print(ser.readline())
 
-'''@sio.event
-def message(data):
-	dat = data
-	for i in dat:
-		if(i['name'] == 'gas_level'):
-			print(i['state'])'''
+
 			
 if KeyboardInterrupt:
 	ser.write("0".encode()  )
